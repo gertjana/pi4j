@@ -86,7 +86,7 @@ public class GpioFactory {
         // if a controller has not been created, then create a new instance
         // Note: this is not thread safe singleton 
         if (controller == null) {
-            controller = new GpioControllerImpl();
+            controller = new GpioControllerImpl(provider);
         }
         // else return a copy of the existing controller
         return controller;
